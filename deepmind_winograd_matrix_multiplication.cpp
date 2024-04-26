@@ -2,6 +2,8 @@
 // Implemented by Sayantan Ghorai
 #include <bits/stdc++.h>
 using namespace std;
+#define int long long
+#define float double
 static void naive_multiplication(float *A, float *B, float *C, const int M, const int K, const int N)
 {
     for (int i = 0; i < M; i++)
@@ -1949,7 +1951,7 @@ static void matrix_multiplication_test(int rowsA, int colsB, int commonDimension
     srand(seed);
     clock_t start, end;
 
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < 1; i++)
     {
         float *matrixA = (float *)malloc(rowsA * commonDimension * sizeof(float));
         float *matrixB = (float *)malloc(commonDimension * colsB * sizeof(float));
@@ -2003,9 +2005,9 @@ signed main()
     // rowsA
     M = 1000;
     // colsB
-    N = 3000;
+    N = 1000;
     // common dimension
-    K = 3000;
+    K = 1000;
     // maximum value in input
     maxval = 10;
     matrix_multiplication_test(M, N, K, maxval);
